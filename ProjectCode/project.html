@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+
+    background-image: url(clg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    
+}
+        .news-container {
+            float: left;
+            width: 50%; 
+            height: 300px; 
+            overflow: hidden; 
+            padding: 10px;
+            margin-left: 20px; 
+            margin-top: 20px; 
+            border: 1px solid #ccc; 
+            position: relative;
+            background-color: #FFEC9E; 
+        }
+
+        .news-item {
+            animation: moveUp 25s linear infinite;
+            position: relative; 
+            width: 100%; 
+            box-sizing: border-box;          
+        }
+
+        @keyframes moveUp {
+            0% {
+                top: 100%;
+            }
+            100% {
+                top: -100%; 
+            }
+        }
+
+        h2 {
+            margin-left: 30px; 
+        }
+
+        header {
+            background-color: #A34343; 
+            color: #ffffff; 
+        }
+        .news-heading {
+            background-color: #FFF2D7; 
+            color: #32012F; 
+            padding: 10px; 
+            margin-left: 20px; 
+            margin-top: 20px; 
+            width: 50%; 
+            
+        }
+        
+    
+    </style>
+    
+</head>
+<body>
+
+<header>
+    <h1>J.C. Bose University of Science and Technology</h1>   
+    <button id="openChatbot">Chat with Us</button>
+</header>
+
+<main>
+    
+    <div class = "news-heading">
+        <h2>News and Updates</h2>
+    </div>
+    <div class="news-container">
+        <div class="news-item">
+            <h3>Upcoming Event</h3>
+            <p>Join us for the annual science fair on April 20th! Explore exciting projects and experiments by our students and faculty.</p>
+        </div>
+        <div class="news-item">
+            <h3>Campus Renovation</h3>
+            <p>We're pleased to announce the completion of the new library wing. Visit us to explore our expanded collection and study spaces.</p>
+        </div>
+        <div class="news-item">
+            <h3>Scholarship Opportunity</h3>
+            <p>Apply now for our merit-based scholarships! Deadline for applications is May 1st. Don't miss out on this opportunity.</p>
+        </div>
+        <div class="news-item">
+            <h3>Research Symposium</h3>
+            <p>Save the date for our annual Research Symposium on May 15th. Explore groundbreaking research conducted by our faculty and students.</p>
+        </div>
+        <div class="news-item">
+            <h3>Admissions Open</h3>
+            <p>Applications for the upcoming academic year are now open. Apply online through our admissions portal.</p>
+        </div> 
+    </div>
+    
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/J.C._Bose_University_of_Science_and_Technology%2C_YMCA_logo.png" alt="College Logo">
+</main>
+
+<div id="chatbotPopup">
+    <span id="closeChatbot">&times;</span>
+    <iframe
+        allow="microphone;"
+        width="350"
+        height="430"
+        src="https://console.dialogflow.com/api-client/demo/embedded/9a186eb0-eab7-4f6f-8f32-700c154c09b3">
+    </iframe>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
